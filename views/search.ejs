@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <h1>Search Results</h1>
+  
+  <% if (users.length === 0) { %>
+    <p>No users found.</p>
+  <% } else { %>
+    <ul>
+      <% users.forEach(user => { %>
+        <li><%= user.firstName %> <%= user.lastName %> - <%= user.email %></li>
+      <% }) %>
+    </ul>
+  <% } %>
+  
+  <a href="/">Back to Home</a>
+</body>
+</html>
